@@ -1,6 +1,8 @@
 import { JsonController, Get, Param } from 'routing-controllers'
 import pagesById, { Page } from './data'
 
+// type PageList = { pages: Page[] }
+
 @JsonController()
 export default class PageController {
 
@@ -10,4 +12,8 @@ export default class PageController {
     ): Page {
         return pagesById[id]
     }
-}
+    // @Get ('/pages')
+    // allPages (): PageList{
+    //     return 
+    // }
+}   
