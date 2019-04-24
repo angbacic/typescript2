@@ -1,9 +1,5 @@
-import { JsonController, Get, Param, Put,Body, NotFoundError,HttpCode,Post } from 'routing-controllers'
-// , , Post, HttpCode}
-// import pagesById, { Page } from './data'
+import { JsonController, Get, Param, Put, Body, NotFoundError, HttpCode, Post } from 'routing-controllers'
 import Page from './entity'
-
-// type PageList = { pages: Page[] }
 
 @JsonController()
 export default class PageController {
@@ -14,7 +10,6 @@ getPage(
 ) {
   return Page.findOne(id)
 }
-
 
 @Get('/pages')
 async allPages() {
